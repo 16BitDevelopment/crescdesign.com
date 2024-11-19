@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    --nav-height: 5em;
+
+    --colour1: #fff;
+    --colour2: #7c4896;
+    --colour3: #60257d;
+    --colour4: #3a1449;
+    --colour5: #000;
+
+    font-family: Arial;
+
+    color: var(--colour1);
+}
+
+:root {
+    --scroll: 0;
+}
+
+body {
+    font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 0.6rem;
+    }
+}

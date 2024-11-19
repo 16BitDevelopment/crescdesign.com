@@ -1,0 +1,115 @@
+#nav-toggle {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 2em;
+
+    z-index: 999;
+}
+
+nav .nav-overlay {
+    position: fixed;
+    inset: 0;
+    
+    background-color: var(--colour5);
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity 0.5s;
+}
+
+nav .logo {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    opacity: calc((max(var(--scroll), 90) - 90) / 10);
+}
+
+nav .logo img {
+    height: 100%;
+}
+
+nav .nav-hamburger {
+    font-size: 2em;
+
+    display: none;
+
+    opacity: calc((max(var(--scroll), 90) - 90) / 10);
+}
+
+nav .pages {
+    display: flex;
+    gap: 2em;
+
+    opacity: calc((max(var(--scroll), 90) - 90) / 10);
+}
+
+nav .pages .nav-close {
+    font-size: 2em;
+
+    display: none;
+}
+
+nav .pages a {
+    text-decoration: none;
+}
+
+#nav-toggle:checked ~ nav .pages {
+    opacity: 1;
+
+    translate: 0;
+}
+
+#nav-toggle:checked ~ nav .nav-overlay {
+    pointer-events: all;
+
+    opacity: 0.75;
+}
+
+@media (max-width: 500px) {
+    nav .nav-hamburger {
+        display: block;
+    }
+
+    nav .pages {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        max-width: 100%;
+
+        flex-direction: column;
+
+        padding: 2em;
+
+        translate: 100% 0;
+
+        background-color: var(--colour4);
+
+        transition: translate 0.5s;
+    }
+
+    nav .pages a {
+        font-size: 1rem;
+    }
+
+    nav .pages .nav-close {
+        display: block;
+    }
+}

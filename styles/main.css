@@ -1,0 +1,42 @@
+main {
+    height: 100vh;
+
+    margin-top: 200vh;
+
+    background-color: var(--colour2);
+}
+
+main .main {
+    position: fixed;
+    top: calc(8em - var(--scroll) / 100 * 8em);
+    bottom: calc(8em - var(--scroll) / 100 * 8em);
+    right: 0;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+
+    padding: calc(var(--scroll) / 100 * 8em) 0;
+
+    translate: calc(100% - (min(var(--scroll), 100) / 100 * 100%)) calc((max(var(--scroll), 100) - 100) * -1vh);
+
+    border-radius: calc(50px - var(--scroll) / 100 * 50px);
+
+    background-color: var(--colour2);
+}
+
+main .main.left {
+    left: 0;
+    right: unset;
+
+    translate: calc(-100% + (min(var(--scroll), 100) / 100 * 100%)) calc((max(var(--scroll), 100) - 100) * -1vh);
+}
+
+main .main .main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    padding: 5em 8em;
+    padding-right: 1em;
+}

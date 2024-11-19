@@ -1,0 +1,52 @@
+header {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-image: linear-gradient(90deg, var(--colour4), var(--colour3) calc(var(--bg)), var(--colour3) calc(100% - var(--bg)), var(--colour4) 100%);
+
+    animation: var-anim 3s ease-in-out 1 forwards;
+
+    z-index: -1;
+}
+
+header .header-image {
+    height: 75%;
+
+    user-select: none;
+
+    filter: blur(calc(3px *  (var(--scroll) / 100)));
+    scale: calc((var(--scroll) / 100 * 0.25) + 1);
+}
+
+header .header-image img {
+    max-height: 100%;
+    aspect-ratio: 1;
+    max-width: 100%;
+
+    object-fit: cover;
+
+    mask-image: url(../images/paint.gif);
+    mask-size: cover;
+
+    transition: filter 0.5s;
+}
+
+@property --bg {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+}
+
+@keyframes var-anim {
+    from {
+        --bg: 0%;
+    }
+
+    to {
+        --bg: 50%;
+    }
+}
