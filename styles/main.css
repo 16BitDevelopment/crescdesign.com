@@ -2,7 +2,55 @@ main {
     padding: 2em;
     padding-top: var(--nav-height);
 
-    height: 100vh;
+    min-height: 100vh;
 
     background-image: linear-gradient(45deg, var(--colour4), var(--colour3));
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+main section {
+    position: relative;
+
+    height: 300px;
+
+    background-color: var(--colour2);
+}
+
+main section .background-image {
+    position: absolute;
+    inset: 0;
+}
+
+main section .background-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+main section p {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #00000080;
+
+    opacity: 0;
+
+    transition: opacity 0.25s;
+}
+
+main section:hover p {
+    opacity: 1;
+}
+
+@media (max-width: 750px) {
+    main {
+        grid-template-columns: 1fr;
+    }
 }

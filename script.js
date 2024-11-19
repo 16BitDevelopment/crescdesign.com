@@ -22,8 +22,6 @@ setScrollVar();
 
 // 3d text
 
-text3d(document.getElementById("logo"), 10, 1, 1, "#000");
-
 function text3d(el, layersNum, xPos, yPos, colour) {
     let layers = [];
 
