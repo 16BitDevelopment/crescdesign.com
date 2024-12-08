@@ -1,11 +1,4 @@
 main {
-    padding: 2em;
-    padding-top: var(--nav-height);
-
-    min-height: 100vh;
-
-    background-image: linear-gradient(45deg, var(--colour4), var(--colour3));
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2em;
