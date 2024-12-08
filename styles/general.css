@@ -21,6 +21,8 @@
     --scroll: 0;
 
     scrollbar-width: none;
+
+    background-color: var(--colour4);
 }
 
 body {

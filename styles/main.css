@@ -16,7 +16,11 @@ main section {
 
     height: 300px;
 
+    border-radius: 0.5em;
+
     background-color: var(--colour2);
+
+    overflow: hidden;
 }
 
 main section .background-image {
@@ -30,13 +34,17 @@ main section .background-image img {
     object-fit: cover;
 }
 
-main section p {
+main section a {
     position: absolute;
     inset: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    font-size: 1.5em;
+
+    text-decoration: none;
 
     background-color: #00000080;
 
@@ -45,11 +53,11 @@ main section p {
     transition: opacity 0.25s;
 }
 
-main section:hover p {
+main section:hover a {
     opacity: 1;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
     main {
         grid-template-columns: 1fr;
     }

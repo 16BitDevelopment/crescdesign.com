@@ -63,7 +63,29 @@ nav .pages .nav-close {
 }
 
 nav .pages a {
+    position: relative;
+    
     text-decoration: none;
+}
+
+nav .pages a::after {
+    content: "";
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0.05em;
+
+    width: 0%;
+
+    background-color: var(--colour1);
+
+    transition: width 0.25s;
+}
+
+nav .pages a:hover::after {
+    width: 100%;
 }
 
 nav .socials {
@@ -113,6 +135,7 @@ nav .socials a {
 
     nav .pages a {
         font-size: 1rem;
+        width: fit-content;
     }
 
     nav .pages .nav-close {
