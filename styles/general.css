@@ -6,10 +6,18 @@
 
     --nav-height: 8em;
 
+    /* old colours */
     --colour1: #fff;
     --colour2: #7c4896;
     --colour3: #60257d;
     --colour4: #3a1449;
+    --colour5: #000;
+
+    /* new colours */
+    --colour1: #60257d;
+    --colour2: #7c4896;
+    --colour3: #fff;
+    --colour4: #c3c3c3;
     --colour5: #000;
 
     font-family: Arial;
@@ -35,7 +43,7 @@ main {
 
     min-height: 100vh;
 
-    background-image: linear-gradient(45deg, var(--colour4), var(--colour3));
+    background-color: var(--colour3);
 }
 
 @media (max-width: 800px) {
