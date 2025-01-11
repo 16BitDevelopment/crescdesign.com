@@ -65,6 +65,8 @@ nav .pages .nav-close {
 nav .pages a {
     position: relative;
     
+    font-weight: 500;
+
     text-decoration: none;
 }
 
@@ -72,10 +74,10 @@ nav .pages a::after {
     content: "";
 
     position: absolute;
-    top: 100%;
+    bottom: 0;
     left: 0;
     right: 0;
-    height: 0.05em;
+    height: 1px;
 
     width: 0%;
 
