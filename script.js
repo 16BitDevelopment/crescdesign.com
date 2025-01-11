@@ -31,3 +31,10 @@ function text3d(el, layersNum, xPos, yPos, colour) {
 
     el.style.textShadow = layers.join(",");
 }
+
+// Copyright
+
+const copyrightEl = document.getElementById("date");
+
+const d = new Date();
+copyrightEl.innerHTML = d.getFullYear();
