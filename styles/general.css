@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url(fonts/gilroy.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +17,8 @@
     --colour4: #dddddd;
     --colour5: #000;
 
-    font-family: Arial;
+    font-family: "Gilroy", Arial;
+    font-weight: 500;
 
     color: var(--colour1);
 }
