@@ -17,8 +17,21 @@ section {
     margin-bottom: 2em;
 }
 
-section:not(.active) {
+section img {
     opacity: 0;
+}
+
+section img[src] {
+    opacity: 1;
+}
+
+.single {
+    display: flex;
+    justify-content: center;
+}
+
+.single img {
+    height: 100dvh;
 }
 
 .center {
