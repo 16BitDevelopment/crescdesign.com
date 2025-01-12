@@ -31,7 +31,8 @@ section img[src] {
 }
 
 .single img {
-    height: 100dvh;
+    max-height: 100dvh;
+    max-width: 100%;
 }
 
 .center {
