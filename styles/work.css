@@ -1,9 +1,41 @@
 h1 {
     font-size: 5em;
 
-    width: 50%;
+    width: 100%;
+
+    margin: 1em 0;
+    padding: 0 25%;
+
+    text-align: center;
+
+    font-weight: 700;
 }
 
-p {
-    margin-top: 3em;
+section {
+    width: 100%;
+
+    margin-bottom: 2em;
+}
+
+.center {
+    display: flex;
+    gap: 3em;
+}
+
+.center img {
+    width: 0;
+    flex: 1 1 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.gallery img {
+    width: 20em;
+
+    border-radius: 1em;
 }
