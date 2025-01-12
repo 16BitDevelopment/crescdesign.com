@@ -17,6 +17,10 @@ section {
     margin-bottom: 2em;
 }
 
+section:not(.active) {
+    opacity: 0;
+}
+
 .center {
     display: flex;
     gap: 3em;
